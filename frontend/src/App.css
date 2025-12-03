@@ -1,11 +1,25 @@
 /* Portfolio styles - minimal global overrides */
 
-/* Hide watermark */
+/* Hide watermark - comprehensive approach */
 [class*="watermark"],
 [class*="emergent"],
+[class*="Watermark"],
+[class*="Emergent"],
 div[style*="position: fixed"][style*="bottom"],
-div[style*="position: fixed"][style*="right"] {
+div[style*="position: fixed"][style*="right"],
+a[href*="emergent"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Additional watermark removal */
+body > div:last-child {
+  display: none !important;
+}
+
+/* Target specifically positioned elements in bottom right */
+div[style*="position"][style*="z-index"] {
+  display: none !important;
 }
