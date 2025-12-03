@@ -1,1 +1,11 @@
 /* Portfolio styles - minimal global overrides */
+
+/* Hide watermark */
+[class*="watermark"],
+[class*="emergent"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
