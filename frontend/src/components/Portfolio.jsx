@@ -163,7 +163,15 @@ const Portfolio = () => {
       description: "Smart credit card recommendation engine. Analyzes real-time location & merchant codes to maximize user rewards by suggesting the best credit cards.",
       stats: "Sub-100ms Latency",
       tech: ["React Native", "FastAPI", "Python", "PostgreSQL"],
-      color: "bg-emerald-50"
+      color: "bg-blue-50"
+    },
+    {
+      title: "BackTrack",
+      category: "Browser Extension",
+      description: "A floating table of contents for AI chat interfaces. Navigate prompts with ease on ChatGPT, Claude, and Gemini with a draggable, resizable glassmorphism panel.",
+      stats: "100% Private",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Shadow DOM"],
+      color: "bg-violet-50"
     },
     {
       title: "Effort Logger",
