@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ArrowUpRight, 
-  Terminal, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUpRight,
+  Terminal,
   Check,
   MapPin,
   Phone,
@@ -25,7 +25,7 @@ const copyTextToClipboard = (text, onSuccess, onError) => {
       document.body.appendChild(textArea);
       textArea.focus();
       textArea.select();
-      
+
       try {
         const successful = document.execCommand('copy');
         if (successful) {
@@ -43,12 +43,12 @@ const copyTextToClipboard = (text, onSuccess, onError) => {
     // Fallback for older browsers or if API is entirely unavailable
     const textArea = document.createElement("textarea");
     textArea.value = text;
-    textArea.style.position = "fixed"; 
+    textArea.style.position = "fixed";
     textArea.style.opacity = 0;
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    
+
     try {
       const successful = document.execCommand('copy');
       if (successful) {
@@ -80,7 +80,7 @@ const Portfolio = () => {
   const handleContact = (e) => {
     e.preventDefault();
     const email = "harshithk0403@gmail.com";
-    
+
     // Use the robust copy function
     copyTextToClipboard(
       email,
@@ -104,7 +104,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'work', 'projects', 'about', 'contact']; 
+      const sections = ['home', 'work', 'projects', 'about', 'contact'];
       const scrollPosition = window.scrollY + 200;
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -168,6 +168,7 @@ const Portfolio = () => {
     {
       title: "BackTrack",
       category: "Browser Extension",
+      link: "https://chromewebstore.google.com/detail/backtrack/nojmeabhkacngehoafleabhfbkpckpen",
       description: "A floating table of contents for AI chat interfaces. Navigate prompts with ease on ChatGPT, Claude, and Gemini with a draggable, resizable glassmorphism panel.",
       stats: "100% Private",
       tech: ["React", "TypeScript", "Tailwind CSS", "Shadow DOM"],
@@ -185,7 +186,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-stone-900 font-sans selection:bg-emerald-200 selection:text-emerald-900">
-      
+
       {/* Floating Navigation Pill */}
       <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
         <nav className="bg-white/80 backdrop-blur-md border border-stone-200 rounded-full px-2 py-2 shadow-lg shadow-stone-200/50 flex items-center gap-1 pointer-events-auto">
@@ -196,18 +197,17 @@ const Portfolio = () => {
               <button
                 key={id}
                 onClick={() => scrollToSection(id)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  isActive 
-                    ? 'bg-stone-900 text-white shadow-md' 
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive
+                    ? 'bg-stone-900 text-white shadow-md'
                     : 'text-stone-500 hover:text-stone-900 hover:bg-stone-100'
-                }`}
+                  }`}
               >
                 {item}
               </button>
             );
           })}
           <div className="w-px h-4 bg-stone-300 mx-2 hidden sm:block"></div>
-          <button 
+          <button
             onClick={handleContact}
             className="p-2 rounded-full bg-emerald-500 text-white hover:bg-emerald-600 transition-colors hidden sm:flex items-center justify-center relative group"
             title="Contact Me (Email copied on click)"
@@ -225,18 +225,18 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col justify-center px-6 pt-20 relative">
         <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gradient-to-b from-orange-100/40 to-emerald-100/40 rounded-full blur-[120px] -z-10 opacity-60 pointer-events-none" />
-        
+
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-stone-200 bg-white text-xs font-medium text-stone-500 tracking-wide uppercase">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Available for New Opportunities
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl font-serif font-medium leading-[0.95] tracking-tight text-stone-900">
               Harshith Kamma<span className="text-emerald-500">.</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-stone-500 max-w-2xl font-light leading-relaxed">
               Software Engineer & AI Enthusiast. Co-Founder of <span className="text-stone-900 font-medium">TapRight</span>. I build intuitive, data-powered financial tools that transform complex algorithms into <span className="text-stone-900 font-medium">smarter user decisions</span>.
             </p>
@@ -300,7 +300,7 @@ const Portfolio = () => {
       <section id="projects" className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-serif text-stone-900 mb-16">Featured Projects</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <ProjectCard key={i} project={project} />
@@ -313,7 +313,7 @@ const Portfolio = () => {
       <section id="about" className="py-32 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-[1.5fr_1fr] gap-16">
-            
+
             {/* Left: Bio */}
             <div>
               <h2 className="text-4xl font-serif text-stone-900 mb-8">About Me</h2>
@@ -336,7 +336,7 @@ const Portfolio = () => {
                 <Terminal size={20} className="text-emerald-500" />
                 Technical Arsenal
               </h3>
-              
+
               <div className="space-y-6">
                 <div>
                   <div className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-3">Languages</div>
@@ -348,7 +348,7 @@ const Portfolio = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="w-full h-px bg-stone-100" />
 
                 <div>
@@ -384,68 +384,68 @@ const Portfolio = () => {
       {/* New Contact Section */}
       <section id="contact" className="py-32 px-6 bg-stone-50/50 border-t border-stone-100">
         <div className="container mx-auto max-w-5xl">
-            <h2 className="text-4xl font-serif text-stone-900 mb-10">Let's Connect</h2>
-            <p className="text-stone-600 text-lg mb-16 max-w-2xl">
-                I'm always open to discussing new engineering challenges, mentorship, or career opportunities. Feel free to reach out directly.
-            </p>
+          <h2 className="text-4xl font-serif text-stone-900 mb-10">Let's Connect</h2>
+          <p className="text-stone-600 text-lg mb-16 max-w-2xl">
+            I'm always open to discussing new engineering challenges, mentorship, or career opportunities. Feel free to reach out directly.
+          </p>
 
-            <div className="grid md:grid-cols-2 gap-12">
-                
-                {/* Contact Info (Left - Primary focus) */}
-                <div className="space-y-8">
-                    <h3 className="text-xl font-bold text-stone-900 flex items-center gap-2">
-                        <MessageSquare size={20} className="text-emerald-500"/> Direct Contact
-                    </h3>
-                    
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-4 text-stone-700 group cursor-pointer" onClick={handleContact}>
-                            <Mail size={20} className="text-stone-500 group-hover:text-emerald-600 transition-colors" />
-                            <span className="hover:text-emerald-600 transition-colors">harshithk0403@gmail.com</span>
-                            <span className={`text-xs text-stone-500 border border-stone-200 px-2 py-1 rounded-full ml-auto ${emailCopied ? 'bg-emerald-100 text-emerald-700' : 'bg-stone-100'}`}>
-                                {emailCopied ? 'Copied!' : 'Click to Copy'}
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-4 text-stone-700">
-                            <MapPin size={20} className="text-stone-500" />
-                            <span>Tustin, California, United States</span>
-                        </div>
-                        <div className="flex items-center gap-4 text-stone-700">
-                            <Phone size={20} className="text-stone-500" />
-                            <span>602-813-4661 (Mobile)</span>
-                        </div>
-                    </div>
+          <div className="grid md:grid-cols-2 gap-12">
 
-                    <h3 className="text-xl font-bold text-stone-900 pt-4">Follow Me</h3>
-                    <div className="flex gap-6">
-                      <a href="https://linkedin.com/in/harshithkamma" target="_blank" rel="noreferrer" className="p-3 bg-white border border-stone-200 rounded-full text-stone-600 hover:text-emerald-600 hover:border-emerald-300 transition-colors">
-                        <Linkedin size={24} />
-                      </a>
-                      <a href="https://github.com/HarshithKamma" target="_blank" rel="noreferrer" className="p-3 bg-white border border-stone-200 rounded-full text-stone-600 hover:text-stone-900 hover:border-stone-300 transition-colors">
-                        <Github size={24} />
-                      </a>
-                    </div>
+            {/* Contact Info (Left - Primary focus) */}
+            <div className="space-y-8">
+              <h3 className="text-xl font-bold text-stone-900 flex items-center gap-2">
+                <MessageSquare size={20} className="text-emerald-500" /> Direct Contact
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 text-stone-700 group cursor-pointer" onClick={handleContact}>
+                  <Mail size={20} className="text-stone-500 group-hover:text-emerald-600 transition-colors" />
+                  <span className="hover:text-emerald-600 transition-colors">harshithk0403@gmail.com</span>
+                  <span className={`text-xs text-stone-500 border border-stone-200 px-2 py-1 rounded-full ml-auto ${emailCopied ? 'bg-emerald-100 text-emerald-700' : 'bg-stone-100'}`}>
+                    {emailCopied ? 'Copied!' : 'Click to Copy'}
+                  </span>
                 </div>
-
-                {/* Quick Message Form (Right) */}
-                <div className="bg-white p-8 rounded-2xl border border-stone-100 shadow-lg h-full flex flex-col items-center justify-center text-center">
-                    <Send size={48} className="text-emerald-500 mb-6" />
-                    <h3 className="text-2xl font-bold text-stone-900 mb-4 font-serif">Ready to start a conversation?</h3>
-                    <p className="text-stone-600 mb-8">
-                        The best way to reach me is via email for immediate consideration.
-                    </p>
-                    <button 
-                        onClick={handleContact}
-                        className="px-8 py-4 bg-stone-900 text-white font-medium rounded-xl hover:bg-emerald-600 transition-colors shadow-lg shadow-stone-300/50"
-                    >
-                        Send Email
-                    </button>
+                <div className="flex items-center gap-4 text-stone-700">
+                  <MapPin size={20} className="text-stone-500" />
+                  <span>Tustin, California, United States</span>
                 </div>
+                <div className="flex items-center gap-4 text-stone-700">
+                  <Phone size={20} className="text-stone-500" />
+                  <span>602-813-4661 (Mobile)</span>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-stone-900 pt-4">Follow Me</h3>
+              <div className="flex gap-6">
+                <a href="https://linkedin.com/in/harshithkamma" target="_blank" rel="noreferrer" className="p-3 bg-white border border-stone-200 rounded-full text-stone-600 hover:text-emerald-600 hover:border-emerald-300 transition-colors">
+                  <Linkedin size={24} />
+                </a>
+                <a href="https://github.com/HarshithKamma" target="_blank" rel="noreferrer" className="p-3 bg-white border border-stone-200 rounded-full text-stone-600 hover:text-stone-900 hover:border-stone-300 transition-colors">
+                  <Github size={24} />
+                </a>
+              </div>
             </div>
-            
-            {/* Footer Text */}
-            <div className="mt-20 pt-8 border-t border-stone-200 text-center text-stone-400 text-sm">
-                <p>&copy; 2025 Harshith Kamma. Crafted with code.</p>
+
+            {/* Quick Message Form (Right) */}
+            <div className="bg-white p-8 rounded-2xl border border-stone-100 shadow-lg h-full flex flex-col items-center justify-center text-center">
+              <Send size={48} className="text-emerald-500 mb-6" />
+              <h3 className="text-2xl font-bold text-stone-900 mb-4 font-serif">Ready to start a conversation?</h3>
+              <p className="text-stone-600 mb-8">
+                The best way to reach me is via email for immediate consideration.
+              </p>
+              <button
+                onClick={handleContact}
+                className="px-8 py-4 bg-stone-900 text-white font-medium rounded-xl hover:bg-emerald-600 transition-colors shadow-lg shadow-stone-300/50"
+              >
+                Send Email
+              </button>
             </div>
+          </div>
+
+          {/* Footer Text */}
+          <div className="mt-20 pt-8 border-t border-stone-200 text-center text-stone-400 text-sm">
+            <p>&copy; 2025 Harshith Kamma. Crafted with code.</p>
+          </div>
 
         </div>
       </section>
@@ -458,7 +458,7 @@ const Portfolio = () => {
 const ProjectCard = ({ project }) => {
   return (
     <div className={`group relative rounded-3xl p-10 flex flex-col justify-between min-h-[500px] overflow-hidden transition-all duration-500 hover:shadow-2xl ${project.color}`}>
-      
+
       {/* Content */}
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-4">
@@ -480,7 +480,7 @@ const ProjectCard = ({ project }) => {
       {/* Bottom Stats/Tech */}
       <div className="relative z-10 mt-auto border-t border-stone-900/10 pt-6">
         <div className="flex items-center justify-between mb-4">
-            <span className="text-2xl font-serif text-stone-900 italic">{project.stats}</span>
+          <span className="text-2xl font-serif text-stone-900 italic">{project.stats}</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
