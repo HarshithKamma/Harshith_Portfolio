@@ -198,8 +198,8 @@ const Portfolio = () => {
                 key={id}
                 onClick={() => scrollToSection(id)}
                 className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${isActive
-                    ? 'bg-stone-900 text-white shadow-md scale-105'
-                    : 'text-stone-500 hover:text-stone-900 hover:bg-stone-100 active:scale-95'
+                  ? 'bg-stone-900 text-white shadow-md scale-105'
+                  : 'text-stone-500 hover:text-stone-900 hover:bg-stone-100 active:scale-95'
                   }`}
               >
                 {item}
@@ -398,7 +398,7 @@ const Portfolio = () => {
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-serif text-stone-900 mb-6 sm:mb-8 md:mb-10">Let's Connect</h2>
           <p className="text-stone-600 text-base sm:text-lg mb-10 sm:mb-12 md:mb-16 max-w-2xl">
-            I'm always open to discussing new engineering challenges, mentorship, or career opportunities. Feel free to reach out directly.
+            I'm always open to discussing new engineering challenges, mentorship, and career opportunities. Feel free to reach out directly.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
