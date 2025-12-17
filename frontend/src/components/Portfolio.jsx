@@ -171,7 +171,7 @@ const Portfolio = () => {
       link: "https://chromewebstore.google.com/detail/backtrack/nojmeabhkacngehoafleabhfbkpckpen",
       description: "A floating table of contents for AI chat interfaces. Navigate prompts with ease on ChatGPT, Claude, and Gemini with a draggable, resizable glassmorphism panel.",
       stats: "100% Private",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Shadow DOM"],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Shadow DOM", "Vanilla"],
       color: "bg-violet-50"
     },
     {
