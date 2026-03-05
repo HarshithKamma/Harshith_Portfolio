@@ -129,7 +129,7 @@ const Portfolio = () => {
       company: "East West Bank",
       role: "C# Developer",
       date: "July 2025 - January 2026",
-      description: "Developed a Vendor Management Application and an IT Project reporting tool using ASP.NET MVC, C#, and SQL Server to automate vendor registration and streamline internal data workflows.",
+      description: "Developed Vendor Management Application and an IT Project reporting tool using ASP.NET MVC, C#, and SQL Server to automate vendor registration and streamline internal data workflows.",
       tags: ["ASP.NET MVC", "C#", "SQL Server"]
     },
     {
