@@ -126,6 +126,13 @@ const Portfolio = () => {
       tags: ["React Native", "FastAPI", "Python", "PostgreSQL"]
     },
     {
+      company: "East West Bank",
+      role: "C# Developer",
+      date: "July 2025 - January 2026",
+      description: "Developed a Vendor Management Application and an IT Project reporting tool using ASP.NET MVC, C#, and SQL Server to automate vendor registration and streamline internal data workflows.",
+      tags: ["ASP.NET MVC, C#, SQL Server"]
+    },
+    {
       company: "Tech Diversified",
       role: "Full Stack Developer",
       date: "Aug 2024 - May 2025",
@@ -353,7 +360,7 @@ const Portfolio = () => {
                 <div>
                   <div className="text-[10px] sm:text-xs font-semibold text-stone-400 uppercase tracking-wider mb-2 sm:mb-3">Languages</div>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {["Java", "Python", "C/C++", "SQL", "JavaScript", "TypeScript"].map((s) => (
+                    {["ASP.NET", "Python", "C#", "SQL", "JavaScript", "TypeScript"].map((s) => (
                       <span key={s} className="px-2 py-1 bg-stone-50 text-stone-700 text-xs sm:text-sm rounded hover:bg-emerald-50 hover:text-emerald-700 transition-colors cursor-default">
                         {s}
                       </span>
