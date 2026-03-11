@@ -337,7 +337,7 @@ const Portfolio = () => {
                   My journey started with a curiosity for how things work, which quickly evolved into a passion for building them. From architecting <span className="text-emerald-600 font-medium">fintech solutions</span> to optimizing <span className="text-emerald-600 font-medium">enterprise workflows</span>, I focus on creating software that is robust, scalable, and delightful to use.
                 </p>
                 <p className="text-sm sm:text-base">
-                  When I'm not coding, you can find me playing cricket or just sleeping.
+                  When I'm not coding, you can find me playing cricket or just sleeping (Don't wake me up).
                 </p>
               </div>
             </div>
