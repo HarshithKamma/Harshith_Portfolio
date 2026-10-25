@@ -119,6 +119,13 @@ const Portfolio = () => {
 
   const experiences = [
     {
+      company: "TCS",
+      role: "Data Analyst",
+      date: "Apr 2026 - Present",
+      description: "Leveraging data-driven insights to optimize business operations and support client initiatives for AT&T. Utilizing a robust data stack for deep-dive analysis, reporting on key metrics, and building comprehensive analytical dashboards for key stakeholders.",
+      tags: ["SQL", "Python", "Excel", "Palnatir Foundry"]
+    },
+    {
       company: "TapRight (Stealth Startup)",
       role: "Co-Founder",
       date: "Oct 2025 - Present",
@@ -331,7 +338,7 @@ const Portfolio = () => {
               <h2 className="text-3xl sm:text-4xl font-serif text-stone-900 mb-6 sm:mb-8">About Me</h2>
               <div className="prose prose-sm sm:prose-base md:prose-lg prose-stone text-stone-600">
                 <p className="mb-4 sm:mb-6 text-sm sm:text-base">
-                  I am a Computer Science graduate of <span className="text-stone-900 font-semibold">Arizona State University</span>, based in <span className="text-stone-900 font-semibold">Tustin, California</span>.
+                  I am a Computer Science graduate of <span className="text-stone-900 font-semibold">Arizona State University</span>, based in <span className="text-stone-900 font-semibold">Plano, Texas</span>.
                 </p>
                 <p className="mb-4 sm:mb-6 text-sm sm:text-base">
                   My journey started with a curiosity for how things work, which quickly evolved into a passion for building them. From architecting <span className="text-emerald-600 font-medium">fintech solutions</span> to optimizing <span className="text-emerald-600 font-medium">enterprise workflows</span>, I focus on creating software that is robust, scalable, and delightful to use.
@@ -419,7 +426,7 @@ const Portfolio = () => {
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4 text-stone-700">
                   <MapPin size={18} className="sm:w-5 sm:h-5 text-stone-500 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">Tustin, California, United States</span>
+                  <span className="text-sm sm:text-base">Plano, Texas, United States</span>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4 text-stone-700">
                   <Phone size={18} className="sm:w-5 sm:h-5 text-stone-500 flex-shrink-0" />
