@@ -119,7 +119,7 @@ const Portfolio = () => {
 
   const experiences = [
     {
-      company: "TCS",
+      company: "Tata Consultancy Services (TCS)",
       role: "Data Analyst",
       date: "Apr 2026 - Present",
       description: "Leveraging data-driven insights to optimize business operations and support client initiatives for AT&T. Utilizing a robust data stack for deep-dive analysis, reporting on key metrics, and building comprehensive analytical dashboards for key stakeholders.",
